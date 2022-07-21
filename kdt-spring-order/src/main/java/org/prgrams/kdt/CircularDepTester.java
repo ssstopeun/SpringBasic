@@ -1,6 +1,5 @@
-package org.prgrams.kdt.kdt;
+package org.prgrams.kdt;
 
-import org.springframework.boot.autoconfigure.web.reactive.HttpHandlerAutoConfiguration;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
