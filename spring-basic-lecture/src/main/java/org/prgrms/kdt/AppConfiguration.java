@@ -10,7 +10,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Configuration
-@ComponentScan(basePackageClasses = {Order.class, Voucher.class})
+@ComponentScan(basePackages = {"org.prgrms.kdt.voucher","org.prgrms.kdt.order","org.prgrms.kdt.configuration" })
 public class AppConfiguration {
 
 
