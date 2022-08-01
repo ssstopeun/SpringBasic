@@ -9,10 +9,10 @@ import java.util.UUID;
 @Service
 public class VoucherService {
 //  @Autowired
-  private VoucherRepository voucherRepository;
+  private final VoucherRepository voucherRepository;
 
 
-  public VoucherService(@Qualifier("memory") VoucherRepository voucherRepository) {
+  public VoucherService(VoucherRepository voucherRepository) {
     this.voucherRepository = voucherRepository;
   }
 

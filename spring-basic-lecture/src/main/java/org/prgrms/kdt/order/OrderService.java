@@ -1,5 +1,6 @@
 package org.prgrms.kdt.order;
 
+import org.prgrms.kdt.configuration.VersionProvider;
 import org.prgrms.kdt.voucher.VoucherService;
 import org.springframework.stereotype.Service;
 
@@ -9,6 +10,7 @@ import java.util.UUID;
 public class OrderService {
   private final VoucherService voucherService;
   private final OrderRepository orderRepository;
+
 
   public OrderService(VoucherService voucherService, OrderRepository orderRepository) {
     this.voucherService = voucherService;
