@@ -1,0 +1,44 @@
+17:09:45.699 [main] DEBUG org.prgrms.kdt.order.OrderProperties - [OrderProperties] version -> v1.0.0
+17:09:45.701 [main] DEBUG org.prgrms.kdt.order.OrderProperties - [OrderProperties] minimumOrderAmount -> 1
+17:09:45.701 [main] DEBUG org.prgrms.kdt.order.OrderProperties - [OrderProperties] supportVendors -> [a, b, c, d]
+17:09:45.701 [main] DEBUG org.prgrms.kdt.order.OrderProperties - [OrderProperties] javaHome -> C:\Program Files\Amazon Corretto\jdk17.0.4_8
+17:09:45.713 [main] ERROR org.prgrms.kdt.OrderTester - logger name => org.prgrms.kdt.OrderTester
+17:09:45.713 [main] WARN  org.prgrms.kdt.OrderTester - version -> v1.0.0
+17:09:45.715 [main] WARN  org.prgrms.kdt.OrderTester - minimumOrderAmount -> 1
+17:09:45.715 [main] WARN  org.prgrms.kdt.OrderTester - support -> [a, b, c, d]
+17:09:45.715 [main] WARN  org.prgrms.kdt.OrderTester - description -> line 1 hello world
+line 2 xxxx
+line 3
+
+17:32:11.693 [main] INFO  org.prgrms.kdt.KdtApplication - Starting KdtApplication using Java 17.0.4 on DESKTOP-GMVAA15 with PID 12244 (C:\Users\user\Desktop\stopeun\SpringBasic\spring-basic-lecture\target\classes started by user in C:\Users\user\Desktop\stopeun\SpringBasic\spring-basic-lecture)
+17:32:11.694 [main] DEBUG org.prgrms.kdt.KdtApplication - Running with Spring Boot v2.5.1, Spring v5.3.8
+17:32:11.695 [main] INFO  org.prgrms.kdt.KdtApplication - No active profile set, falling back to default profiles: default
+17:32:11.936 [main] DEBUG org.prgrms.kdt.order.OrderProperties - [OrderProperties] version -> v1.0
+17:32:11.936 [main] DEBUG org.prgrms.kdt.order.OrderProperties - [OrderProperties] minimumOrderAmount -> 1
+17:32:11.936 [main] DEBUG org.prgrms.kdt.order.OrderProperties - [OrderProperties] supportVendors -> [a, b, c, d]
+17:32:11.936 [main] DEBUG org.prgrms.kdt.order.OrderProperties - [OrderProperties] javaHome -> C:\Program Files\Amazon Corretto\jdk17.0.4_8
+17:32:11.975 [main] INFO  org.prgrms.kdt.KdtApplication - Started KdtApplication in 0.488 seconds (JVM running for 0.895)
+17:32:11.977 [main] ERROR org.prgrms.kdt.OrderTester - logger name => org.prgrms.kdt.OrderTester
+17:32:11.977 [main] WARN  org.prgrms.kdt.OrderTester - version -> v1.0
+17:32:11.977 [main] WARN  org.prgrms.kdt.OrderTester - minimumOrderAmount -> 1
+17:32:11.977 [main] WARN  org.prgrms.kdt.OrderTester - support -> [a, b, c, d]
+17:32:11.977 [main] WARN  org.prgrms.kdt.OrderTester - description -> line 1 hello world
+line 2 xxxx
+line 3
+
+17:34:33.071 [main] INFO  org.prgrms.kdt.KdtApplication - Starting KdtApplication using Java 17.0.4 on DESKTOP-GMVAA15 with PID 3388 (C:\Users\user\Desktop\stopeun\SpringBasic\spring-basic-lecture\target\classes started by user in C:\Users\user\Desktop\stopeun\SpringBasic\spring-basic-lecture)
+17:34:33.072 [main] DEBUG org.prgrms.kdt.KdtApplication - Running with Spring Boot v2.5.1, Spring v5.3.8
+17:34:33.072 [main] INFO  org.prgrms.kdt.KdtApplication - No active profile set, falling back to default profiles: default
+17:34:33.320 [main] DEBUG org.prgrms.kdt.order.OrderProperties - [OrderProperties] version -> v1.0
+17:34:33.320 [main] DEBUG org.prgrms.kdt.order.OrderProperties - [OrderProperties] minimumOrderAmount -> 1
+17:34:33.320 [main] DEBUG org.prgrms.kdt.order.OrderProperties - [OrderProperties] supportVendors -> [a, b, c, d]
+17:34:33.320 [main] DEBUG org.prgrms.kdt.order.OrderProperties - [OrderProperties] javaHome -> C:\Program Files\Amazon Corretto\jdk17.0.4_8
+17:34:33.359 [main] INFO  org.prgrms.kdt.KdtApplication - Started KdtApplication in 0.503 seconds (JVM running for 0.897)
+17:34:33.361 [main] ERROR org.prgrms.kdt.OrderTester - logger name => org.prgrms.kdt.OrderTester
+17:34:33.361 [main] WARN  org.prgrms.kdt.OrderTester - version -> v1.0
+17:34:33.361 [main] WARN  org.prgrms.kdt.OrderTester - minimumOrderAmount -> 1
+17:34:33.361 [main] WARN  org.prgrms.kdt.OrderTester - support -> [a, b, c, d]
+17:34:33.361 [main] WARN  org.prgrms.kdt.OrderTester - description -> line 1 hello world
+line 2 xxxx
+line 3
+
