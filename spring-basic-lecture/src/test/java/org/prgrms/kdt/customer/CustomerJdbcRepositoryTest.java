@@ -27,13 +27,15 @@ import static org.junit.jupiter.api.Assertions.*;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class CustomerJdbcRepositoryTest {
+
     @Configuration
     @ComponentScan(
-        basePackages = {"org.prgrms.kdt.customer"}
+            basePackages = {"org.prgrms.kdt.customer"}
     )
-    static class Config{
+    static class Config {
+
         @Bean
-        public DataSource dataSource(){
+        public DataSource dataSource() {
             var dataSource = DataSourceBuilder.create()
                     .url("jdbc:mysql://localhost/order_mgmt")
                     .username("root")
@@ -46,10 +48,14 @@ class CustomerJdbcRepositoryTest {
         }
 
         @Bean
-        public JdbcTemplate jdbcTemplate(DataSource dataSource){
-            return new JdbcTemplate();
+        public JdbcTemplate jdbcTemplate(DataSource dataSource) {
+            return new JdbcTemplate(dataSource);
         }
+
     }
+
+
+
 
     @Autowired
     CustomerJdbcRepository customerJdbcRepository;
@@ -61,8 +67,9 @@ class CustomerJdbcRepositoryTest {
 
     @BeforeAll
     void setup(){
-        var newCustomer = new Customer(UUID.randomUUID(), "test-user", "test-user@gmail.com", LocalDateTime.now().truncatedTo(ChronoUnit.MILLIS));
         customerJdbcRepository.deleteAll();
+        newCustomer = new Customer(UUID.randomUUID(), "test-user", "test-user@gmail.com", LocalDateTime.now().truncatedTo(ChronoUnit.MILLIS));
+
     }
 
     @Test
@@ -72,7 +79,7 @@ class CustomerJdbcRepositoryTest {
     }
 
     @Test
-    @Order(2)
+    @Order(5)
     @DisplayName("전체 고객을 조회할 수 있다.")
     public void testFindAll() {
         var customers = customerJdbcRepository.findAll();
@@ -94,7 +101,7 @@ class CustomerJdbcRepositoryTest {
     @Order(4)
     @DisplayName("이메일로 고객을 조회할 수 있다.")
     public void testFindByEmail() {
-        var customer = customerJdbcRepository.findByEmail("new-user@gmail.com");
+        var customer = customerJdbcRepository.findByEmail("test-user@gmail.com");
         assertThat(customer.isEmpty(), is(false));
 
         var unknown = customerJdbcRepository.findByEmail("unknown@gmail.com");
@@ -102,7 +109,7 @@ class CustomerJdbcRepositoryTest {
     }
 
     @Test
-    @Order(5)
+    @Order(2)
     @DisplayName("고객을 추가할 수 있다.")
     public void testInsert() {
 

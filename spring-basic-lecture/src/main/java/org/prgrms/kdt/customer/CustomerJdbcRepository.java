@@ -58,7 +58,7 @@ public class CustomerJdbcRepository implements CustomerRepository {
 
     @Override
     public Customer update(Customer customer) {
-        var update = jdbcTemplate.update("UPDATE customers SET name = ?, email = ?, last_login_at = > WHERE customer_id = UUID_TO_BIN(?)",
+        var update = jdbcTemplate.update("UPDATE customers SET name = ?, email = ?, last_login_at = ? WHERE customer_id = UUID_TO_BIN(?)",
                 customer.getName(),
                 customer.getEmail(),
                 customer.getLastLoginAt() != null ? Timestamp.valueOf(customer.getLastLoginAt()) : null,
@@ -77,7 +77,7 @@ public class CustomerJdbcRepository implements CustomerRepository {
 
     @Override
     public List<Customer> findAll() {
-        return jdbcTemplate.query("select * from customer", customerRowMapper);
+        return jdbcTemplate.query("select * from customers", customerRowMapper);
     }
 
     private void mapToCustomer(List<Customer> allCustomers, ResultSet resultSet) throws SQLException {
@@ -118,7 +118,7 @@ public class CustomerJdbcRepository implements CustomerRepository {
     @Override
     public Optional<Customer> findByEmail(String email) {
         try {
-            return Optional.ofNullable(jdbcTemplate.queryForObject("select * from customers WHERE email = UUID_TO_BIN(?)", customerRowMapper, email.toString().getBytes()));
+            return Optional.ofNullable(jdbcTemplate.queryForObject("select * from customers WHERE email = ?", customerRowMapper, email.toString().getBytes()));
         } catch (EmptyResultDataAccessException e) {
             logger.error("Got empty result", e);
             return Optional.empty();
